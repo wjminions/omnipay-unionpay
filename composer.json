@@ -1,0 +1,32 @@
+{
+  "name": "wjminions/omnipay-unionpay",
+  "type": "library",
+  "description": "UnionPay gateway for Omnipay payment processing library",
+  "keywords": [
+    "union",
+    "unionpay",
+    "gateway",
+    "merchant",
+    "omnipay",
+    "pay",
+    "payment",
+    "purchase",
+    "银联"
+  ],
+  "homepage": "https://github.com/wjminons/omnipay-unionpay",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "wjminions",
+      "email": "wjminions@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Omnipay\\UnionPay\\": "src/"
+    }
+  },
+  "require": {
+    "omnipay/common": "~2.0"
+  }
+}
