@@ -32,7 +32,36 @@ class ExpressCompletePurchaseRequest extends AbstractExpressRequest
 
     public function getRequestParams()
     {
-        return $this->getParameter('request_params');
+        $data = $this->getParameter('request_params');
+
+        return array(
+            "accessType"         => $data["accessType"],
+            "bizType"            => $data["bizType"],
+            "certId"             => $data["certId"],
+            "currencyCode"       => $data["currencyCode"],
+            "encoding"           => $data["encoding"],
+            "exchangeDate"       => $data["exchangeDate"],
+            "exchangeRate"       => $data["exchangeRate"],
+            "merId"              => $data["merId"],
+            "orderId"            => $data["orderId"],
+            "payCardType"        => $data["payCardType"],
+            "payType"            => $data["payType"],
+            "queryId"            => $data["queryId"],
+            "respCode"           => $data["respCode"],
+            "respMsg"            => $data["respMsg"],
+            "settleAmt"          => $data["settleAmt"],
+            "settleCurrencyCode" => $data["settleCurrencyCode"],
+            "settleDate"         => $data["settleDate"],
+            "signMethod"         => $data["signMethod"],
+            "signature"          => $data["signature"],
+            "traceNo"            => $data["traceNo"],
+            "traceTime"          => $data["traceTime"],
+            "txnAmt"             => $data["txnAmt"],
+            "txnSubType"         => $data["txnSubType"],
+            "txnTime"            => $data["txnTime"],
+            "txnType"            => $data["txnType"],
+            "version"            => $data["version"]
+        );
     }
 
 
