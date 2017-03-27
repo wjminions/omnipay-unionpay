@@ -3,6 +3,7 @@
 namespace Omnipay\UnionPay\Message;
 
 use Omnipay\Common\Message\AbstractResponse;
+use Omnipay\Common\Message\RequestInterface;
 
 /**
  * Class ExpressResponse
@@ -19,5 +20,10 @@ class ExpressResponse extends AbstractResponse
     public function isSuccessful()
     {
         return isset($this->data['respCode']) && $this->data['respCode'] == '00';
+    }
+
+    public function getMessage()
+    {
+        return isset($this->data['respMsg']) ? $this->data['respMsg'] : '';
     }
 }
