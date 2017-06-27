@@ -18,7 +18,8 @@
   "authors": [
     {
       "name": "wjminions",
-      "email": "wjminions@gmail.com"
+      "email": "wjminions@gmail.com",
+      "homepage": "https://github.com/wjminions/omnipay-unionpay"
     }
   ],
   "autoload": {
