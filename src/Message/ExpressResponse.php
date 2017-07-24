@@ -40,6 +40,11 @@ class ExpressResponse extends AbstractResponse
         return isset($this->data['queryId']) && $this->data['queryId'] == '00';
     }
 
+    public function getDate()
+    {
+        return $this->data;
+    }
+
 
     /**
      * Is the response successful?
