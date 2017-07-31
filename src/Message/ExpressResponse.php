@@ -61,7 +61,7 @@ class ExpressResponse extends AbstractResponse
             }
         }
 
-        return isset($this->data['respCode']) && $this->data['respCode'] == '00';
+        return isset($this->data['respCode']) && $this->data['respCode'] === '00';
     }
 
     public function getMessage()
