@@ -53,11 +53,19 @@ class ExpressResponse extends AbstractResponse
      */
     public function isSuccessful()
     {
+        if (isset($this->data['origRespCode'])) {
+            if ($this->data['origRespCode'] == '00') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
         return isset($this->data['respCode']) && $this->data['respCode'] == '00';
     }
 
     public function getMessage()
     {
-        return isset($this->data['respMsg']) ? $this->data['respMsg'] : '';
+        return isset($this->data['origRespMsg']) ? $this->data['origRespMsg'] : $this->data['respMsg'];
     }
 }

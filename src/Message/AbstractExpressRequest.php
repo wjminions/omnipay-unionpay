@@ -310,6 +310,18 @@ abstract class AbstractExpressRequest extends AbstractRequest
     }
 
 
+    public function setQueryId($value)
+    {
+        return $this->setParameter('queryId', $value);
+    }
+
+
+    public function getQueryId()
+    {
+        return $this->getParameter('queryId');
+    }
+
+
     protected function httpRequest($method, $data)
     {
         $result = Helper::sendHttpRequest($this->getEndpoint($method), $data);

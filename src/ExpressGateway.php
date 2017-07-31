@@ -270,6 +270,18 @@ class ExpressGateway extends AbstractGateway
     }
 
 
+    public function setQueryId($value)
+    {
+        return $this->setParameter('queryId', $value);
+    }
+
+
+    public function getQueryId()
+    {
+        return $this->getParameter('queryId');
+    }
+
+
     public function purchase(array $parameters = array())
     {
         return $this->createRequest('\Omnipay\UnionPay\Message\ExpressPurchaseRequest', $parameters);
