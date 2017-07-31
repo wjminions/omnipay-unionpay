@@ -37,7 +37,7 @@ class ExpressResponse extends AbstractResponse
 
     public function getTransactionNo()
     {
-        return isset($this->data['queryId']) && $this->data['queryId'] == '00';
+        return isset($this->data['queryId']) && $this->data['queryId'] === '00';
     }
 
     public function getDate()
@@ -54,7 +54,7 @@ class ExpressResponse extends AbstractResponse
     public function isSuccessful()
     {
         if (isset($this->data['origRespCode'])) {
-            if ($this->data['origRespCode'] == '00') {
+            if ($this->data['origRespCode'] === '00') {
                 return true;
             } else {
                 return false;
