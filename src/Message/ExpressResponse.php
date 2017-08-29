@@ -69,6 +69,6 @@ class ExpressResponse extends AbstractResponse
     public function getMessage()
     {
         // 訂單請求過銀聯后必須用origRespMsg獲取支付信息
-        return isset($this->data['origRespMsg']) ? $this->data['origRespMsg'] : $this->data['respMsg'];
+        return isset($this->data['origRespMsg']) ? $this->data['origRespMsg'] : (isset($this->data['respMsg']) ? $this->data['respMsg'] : json_encode($this->data));
     }
 }

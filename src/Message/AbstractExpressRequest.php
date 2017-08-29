@@ -328,10 +328,6 @@ abstract class AbstractExpressRequest extends AbstractRequest
 
         parse_str($result, $data);
 
-        if (! is_array($data)) {
-            $data = array ();
-        }
-
         return $data;
     }
 
